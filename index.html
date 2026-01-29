@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <title>Second Reality Roleplay</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav>
+  <a href="index.html">Start</a>
+  <a href="ServerPhilosophie.html">ServerPhilosophie</a>
+  <a href="https://business.vivid.money/de/pay/AZvNBFUWdXGgk4CpYOzACQ" target="_blank" rel="noopener noreferrer">Unterstützung</a>
+  <a href="https://discord.gg/secondrealityrp" class="discord-btn" target="_blank" rel="noopener noreferrer">Discord</a>
+  <a href="media.html">Videos & Bilder</a>
+  <a href="team.html">Unser Team</a>
+  <a href="https://secondreality.tebex.io/" class="shop-btn" target="_blank" rel="noopener noreferrer">Tebex-Shop</a>
+</nav>
+
+<div class="hero scroll-animate">
+  <video src="Video_Project_10.mp4" autoplay muted loop></video>
+  <div class="hero-text scroll-animate">
+    <h1>SECOND REALITY ROLEPLAY</h1>
+  </div>
+</div>
+
+<!-- MiniGame Icon & Modal -->
+<div class="minigame-icon scroll-animate" id="openMinigame">
+  <img src="SecondReality.jpg" alt="MiniGame starten">
+</div>
+
+<div id="minigameModal" class="modal">
+  <div class="modal-content scroll-animate">
+    <span class="close">&times;</span>
+    <canvas id="minigameCanvas" width="400" height="400"></canvas>
+  </div>
+</div>
+
+<!-- Corner GIF -->
+<img src="second.gif" class="corner-gif scroll-animate">
+
+<!-- JS -->
+<script src="minigame.js"></script>
+
+<!-- SCROLL ANIMATION SCRIPT -->
+<script>
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add("in-view");
+    }
+  });
+}, {
+  threshold: 0.15
+});
+
+document.querySelectorAll(".scroll-animate").forEach(el => observer.observe(el));
+</script>
+
+<!-- NAVBAR SCROLL SCRIPT -->
+<script>
+window.addEventListener('scroll', () => {
+  if(window.scrollY > 50){
+    document.body.classList.add('scrolled');
+  } else {
+    document.body.classList.remove('scrolled');
+  }
+});
+</script>
+
+<script>
+window.addEventListener('scroll', () => {
+  if(window.scrollY > 50){
+    document.body.classList.add('scrolled');
+  } else {
+    document.body.classList.remove('scrolled');
+  }
+});
+</script>
+
+
+</body>
+</html>
+
